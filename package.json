@@ -1,0 +1,33 @@
+{
+  "name": "create-myreact-app",
+  "version": "1.0.0",
+  "description": "A CLI tool to create clean React projects",
+  "main": "index.js",
+  "bin": {
+    "create-myreact-app": "./bin/create-myreact-app.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "templates"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "scaffold",
+    "cli",
+    "vite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.12",
+    "ora": "^5.4.1",
+    "validate-npm-package-name": "^4.0.0"
+  }
+}

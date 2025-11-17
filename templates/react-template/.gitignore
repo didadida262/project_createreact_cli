@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# 测试时生成的临时文件
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

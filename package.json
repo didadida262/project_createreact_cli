@@ -16,11 +16,25 @@
   },
   "keywords": [
     "react",
+    "vue",
     "scaffold",
     "cli",
-    "vite"
+    "vite",
+    "typescript",
+    "tailwind",
+    "template",
+    "generator",
+    "create-app"
   ],
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",

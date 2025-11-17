@@ -13,11 +13,14 @@ npm install
 **方法1: 使用 npm link（推荐）**
 
 ```bash
+# 在脚手架项目目录中执行
 npm link
+
+# 然后在任何目录下使用（注意：命令名是 create-myapp-cli，不是包名）
 create-myapp-cli my-test-app
-# 或使用完整包名
-@miles_wang/create-myapp-cli my-test-app
 ```
+
+**注意：** `npm link` 后，可执行命令名是 `package.json` 中 `bin` 字段定义的名称（`create-myapp-cli`），而不是包名 `@miles_wang/create-myapp-cli`。包名只在通过 `npx` 或 `npm install` 安装时使用。
 
 **方法2: 直接使用 node**
 

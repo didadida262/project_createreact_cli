@@ -28,7 +28,11 @@ npx @miles_wang/create-myapp-cli my-app
 
 1. **运行脚手架命令**
    ```bash
-   npx create-myapp-cli my-app
+   # 发布后使用（推荐）
+   npx @miles_wang/create-myapp-cli my-app
+   
+   # 本地开发测试（npm link 后）
+   create-myapp-cli my-app
    ```
 
 2. **交互式配置**
@@ -231,7 +235,11 @@ create-myapp-cli/
 
 4. **测试脚手架**
    ```bash
+   # npm link 后，使用 bin 字段定义的命令名（create-myapp-cli）
    create-myapp-cli test-app
+   
+   # 注意：不要使用包名 @miles_wang/create-myapp-cli
+   # 包名只在发布后通过 npx 或 npm install 时使用
    ```
 
 ### 模板项目测试

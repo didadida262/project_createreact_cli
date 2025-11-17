@@ -1,4 +1,4 @@
-# create-myreact-app 脚手架 PRD 技术方案
+# create-myapp-cli 脚手架 PRD 技术方案
 
 ## 1. 项目概述
 
@@ -8,7 +8,7 @@
 ### 1.2 项目目标
 - 提供一键式 React 项目创建能力
 - 生成配置完善、结构清晰的 React 项目模板
-- 支持通过 `npx create-myreact-app <project-name>` 命令使用
+- 支持通过 `npx create-myapp-cli <project-name>` 命令使用
 - 项目模板包含必要的开发工具和最佳实践配置
 
 ### 1.3 核心价值
@@ -109,9 +109,9 @@ my-app/
 
 #### 3.2.1 脚手架工具结构
 ```
-create-myreact-app/
+create-myapp-cli/
 ├── bin/
-│   └── create-myreact-app.js    # 可执行入口文件
+│   └── create-myapp-cli.js    # 可执行入口文件
 ├── templates/                    # 项目模板目录
 │   └── react-template/          # React 项目模板
 │       ├── public/
@@ -160,7 +160,7 @@ create-myreact-app/
 
 #### 4.1.1 基本用法
 ```bash
-npx create-myreact-app <project-name>
+npx create-myapp-cli <project-name>
 ```
 
 #### 4.1.2 参数说明
@@ -172,13 +172,13 @@ npx create-myreact-app <project-name>
 #### 4.1.3 命令选项（未来扩展）
 ```bash
 # 指定模板版本
-npx create-myreact-app <project-name> --template <template-name>
+npx create-myapp-cli <project-name> --template <template-name>
 
 # 跳过依赖安装
-npx create-myreact-app <project-name> --skip-install
+npx create-myapp-cli <project-name> --skip-install
 
 # 使用 yarn 安装依赖
-npx create-myreact-app <project-name> --package-manager yarn
+npx create-myapp-cli <project-name> --package-manager yarn
 ```
 
 ### 4.2 项目模板设计
@@ -316,19 +316,19 @@ export default Welcome
 
 #### 5.1.1 创建 npm 包
 ```bash
-mkdir create-myreact-app
-cd create-myreact-app
+mkdir create-myapp-cli
+cd create-myapp-cli
 npm init -y
 ```
 
 #### 5.1.2 package.json 配置
 ```json
 {
-  "name": "create-myreact-app",
+  "name": "create-myapp-cli",
   "version": "1.0.0",
   "description": "A CLI tool to create clean React projects",
   "bin": {
-    "create-myreact-app": "./bin/create-myreact-app.js"
+    "create-myapp-cli": "./bin/create-myapp-cli.js"
   },
   "files": [
     "bin",
@@ -355,7 +355,7 @@ npm init -y
 
 ### 5.2 核心代码实现
 
-#### 5.2.1 入口文件（bin/create-myreact-app.js）
+#### 5.2.1 入口文件（bin/create-myapp-cli.js）
 ```javascript
 #!/usr/bin/env node
 
@@ -465,7 +465,7 @@ program.parse()
 ### 8.2 使用方式
 发布后，用户可以通过以下方式使用：
 ```bash
-npx create-myreact-app my-app
+npx create-myapp-cli my-app
 ```
 
 ### 8.3 版本管理
@@ -535,7 +535,7 @@ npx create-myreact-app my-app
 
 ## 12. 总结
 
-本技术方案详细规划了 `create-myreact-app` 脚手架的开发工作，包括需求分析、技术架构、功能设计、实现方案、开发计划等各个方面。通过遵循本方案，可以开发出一个功能完善、易于使用的 React 项目脚手架工具。
+本技术方案详细规划了 `create-myapp-cli` 脚手架的开发工作，包括需求分析、技术架构、功能设计、实现方案、开发计划等各个方面。通过遵循本方案，可以开发出一个功能完善、易于使用的 React 项目脚手架工具。
 
 **核心亮点**：
 - 使用 Vite 作为构建工具，提供快速的开发体验
@@ -544,5 +544,5 @@ npx create-myreact-app my-app
 - 简单易用的命令行接口
 
 **预期成果**：
-用户可以通过一条简单的命令 `npx create-myreact-app my-app` 快速创建一个配置完善、结构清晰的 React 项目，大大提升开发效率。
+用户可以通过一条简单的命令 `npx create-myapp-cli my-app` 快速创建一个配置完善、结构清晰的 React 项目，大大提升开发效率。
 

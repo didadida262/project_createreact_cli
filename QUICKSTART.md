@@ -21,19 +21,19 @@ npm link
 2. 然后在任何目录下都可以使用：
 
 ```bash
-create-myreact-app my-test-app
+create-myapp-cli my-test-app
 ```
 
 ### 方法2: 直接使用 node
 
 ```bash
-node bin/create-myreact-app.js my-test-app
+node bin/create-myapp-cli.js my-test-app
 ```
 
 ### 方法3: 使用 npx（如果已发布）
 
 ```bash
-npx create-myreact-app my-test-app
+npx create-myapp-cli my-test-app
 ```
 
 ## 测试创建的项目
@@ -65,7 +65,7 @@ npm publish
 发布后，任何人都可以通过以下命令使用：
 
 ```bash
-npx create-myreact-app my-app
+npx create-myapp-cli my-app
 ```
 
 ## 项目结构说明

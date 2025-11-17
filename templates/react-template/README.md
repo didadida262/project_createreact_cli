@@ -1,4 +1,4 @@
-# {{projectName}}
+# react-template
 
 一个使用 React + TypeScript + Tailwind CSS + Aceternity UI 构建的现代化项目模板。
 
@@ -66,7 +66,7 @@
 ## 项目结构
 
 ```
-{{projectName}}/
+react-template/
 ├── public/          # 静态资源目录
 ├── src/            # 源代码目录
 │   ├── components/ # 组件目录

@@ -1,21 +1,22 @@
-# create-myreact-app
+# create-myapp-cli
 
-一个用于快速创建干净、完善的 React 项目的 CLI 脚手架工具。
+一个用于快速创建干净、完善的 React/Vue 项目的 CLI 脚手架工具。
 
 ## 特性
 
 - ⚡️ 使用 Vite 作为构建工具，提供快速的开发体验
 - 🎨 配置完善的开发环境（ESLint + Prettier）
 - 📦 清晰的项目结构和最佳实践
-- 🚀 开箱即用的 React 18+ 项目模板
+- 🚀 支持多模板：React + TypeScript + Tailwind + Aceternity UI / Vue 3 + TypeScript + Element Plus
 - 🎯 包含欢迎页面示例
+- 🔧 交互式配置：包管理器、测试框架、E2E 测试、Git Hooks 等
 
 ## 使用方法
 
 ### 通过 npx 使用（推荐）
 
 ```bash
-npx create-myreact-app my-app
+npx create-myapp-cli my-app
 ```
 
 ### 本地开发
@@ -36,7 +37,7 @@ npm link
 4. 使用命令：
 
 ```bash
-create-myreact-app my-app
+create-myapp-cli my-app
 ```
 
 ## 项目结构
@@ -74,25 +75,38 @@ my-app/
 - ora - 命令行加载动画
 - validate-npm-package-name - 包名验证
 
-### 生成的项目模板
-- React 18+
+### 支持的项目模板
+
+**React 模板：**
+- React 18+ + TypeScript
 - Vite 5+
-- ESLint
-- Prettier
+- Tailwind CSS
+- Framer Motion (Aceternity UI)
+- ESLint + Prettier
+
+**Vue 模板：**
+- Vue 3 + TypeScript
+- Vite 5+
+- Element Plus (自动导入)
+- Vue Router + Pinia
+- Tailwind CSS
+- ESLint + Prettier
 
 ## 开发
 
 ### 项目结构
 
 ```
-create-myreact-app/
+create-myapp-cli/
 ├── bin/                    # 可执行文件
-│   └── create-myreact-app.js
+│   └── create-myapp-cli.js
 ├── lib/                    # 核心逻辑
 │   ├── createProject.js   # 项目创建逻辑
+│   ├── prompts.js         # 交互式选项
 │   └── utils.js           # 工具函数
 ├── templates/              # 项目模板
-│   └── react-template/    # React 项目模板
+│   ├── react-template/    # React 项目模板
+│   └── vue-template/      # Vue 项目模板
 ├── package.json
 └── README.md
 ```

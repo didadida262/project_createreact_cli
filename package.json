@@ -1,10 +1,10 @@
 {
-  "name": "create-myreact-app",
+  "name": "create-myapp-cli",
   "version": "1.0.0",
-  "description": "A CLI tool to create clean React projects",
+  "description": "A CLI tool to create clean React/Vue projects",
   "main": "index.js",
   "bin": {
-    "create-myreact-app": "./bin/create-myreact-app.js"
+    "create-myapp-cli": "./bin/create-myapp-cli.js"
   },
   "files": [
     "bin",

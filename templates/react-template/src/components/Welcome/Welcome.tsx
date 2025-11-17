@@ -20,7 +20,7 @@ function Welcome() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-6 text-center text-5xl font-bold text-white"
         >
-          Welcome to React Template!
+          Welcome to react-template!
         </motion.h1>
         
         <motion.div

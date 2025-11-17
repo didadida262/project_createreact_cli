@@ -1,6 +1,6 @@
 {
   "name": "create-myapp-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool to create clean React/Vue projects",
   "main": "index.js",
   "bin": {

@@ -15,6 +15,8 @@ npm install
 ```bash
 npm link
 create-myapp-cli my-test-app
+# 或使用完整包名
+@miles_wang/create-myapp-cli my-test-app
 ```
 
 **方法2: 直接使用 node**
@@ -121,16 +123,16 @@ npm test
 **发布到 npm 公共仓库：**
 
 ```bash
-npm publish
+# 注意：scope 包必须添加 --access public
+npm publish --access public
 ```
 
-**发布到特定 scope（可选）：**
+**发布 scope 包：**
 
-如果使用 scope（如 `@your-org/create-myapp-cli`），需要：
+本项目使用 scope 包名 `@miles_wang/create-myapp-cli`，发布时需要添加 `--access public`：
 
 ```bash
-# 1. 修改 package.json 中的 name 为 @your-org/create-myapp-cli
-# 2. 发布时添加 --access public（scope 包默认是私有的）
+# scope 包默认是私有的，需要添加 --access public 才能发布为公共包
 npm publish --access public
 ```
 
@@ -139,17 +141,17 @@ npm publish --access public
 **检查包是否发布成功：**
 
 ```bash
-npm view create-myapp-cli
+npm view @miles_wang/create-myapp-cli
 ```
 
 **测试安装和使用：**
 
 ```bash
 # 使用 npx 测试（会从 npm 下载）
-npx create-myapp-cli@latest my-test-app
+npx @miles_wang/create-myapp-cli@latest my-test-app
 
 # 或全局安装测试
-npm install -g create-myapp-cli
+npm install -g @miles_wang/create-myapp-cli
 create-myapp-cli my-test-app
 ```
 
@@ -161,11 +163,11 @@ create-myapp-cli my-test-app
 # 1. 更新版本号
 npm version patch  # 或 minor / major
 
-# 2. 发布
-npm publish
+# 2. 发布（scope 包需要添加 --access public）
+npm publish --access public
 
 # 3. 验证
-npm view create-myapp-cli version
+npm view @miles_wang/create-myapp-cli version
 ```
 
 ### 9. 撤销发布（紧急情况）
@@ -174,10 +176,10 @@ npm view create-myapp-cli version
 
 ```bash
 # 撤销特定版本（72小时内）
-npm unpublish create-myapp-cli@1.0.0
+npm unpublish @miles_wang/create-myapp-cli@1.0.0
 
 # 撤销整个包（72小时内，且没有其他版本）
-npm unpublish create-myapp-cli --force
+npm unpublish @miles_wang/create-myapp-cli --force
 ```
 
 ## 项目结构
@@ -200,6 +202,7 @@ create-myapp-cli/
 
 - **Node.js 版本**: 确保使用 Node.js >= 18.0.0
 - **包名唯一性**: 发布前确保包名在 npm 上唯一
+- **Scope 包发布**: 使用 scope 包名时，必须添加 `--access public` 参数才能发布为公共包
 - **版本号**: 遵循语义化版本规范
 - **文件大小**: 注意包的大小，避免包含不必要的文件
 - **模板变量**: 模板中使用 `{{projectName}}` 格式的变量会被自动替换

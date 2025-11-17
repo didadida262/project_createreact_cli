@@ -21,7 +21,7 @@
 ### 通过 npx 使用（推荐）
 
 ```bash
-npx create-myapp-cli my-app
+npx @miles_wang/create-myapp-cli my-app
 ```
 
 ### 使用步骤

@@ -26,15 +26,15 @@
     "generator",
     "create-app"
   ],
-  "author": "",
+  "author": "miles <719713496@qq.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/didadida262/project_createreact_cli.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/didadida262/project_createreact_cli/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/didadida262/project_createreact_cli#readme",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
